@@ -1,5 +1,5 @@
 from django.db import models
-genderC = (('male','female'),('female','female'))
+genderC = (('male','male'),('female','female'))
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
