@@ -10,6 +10,9 @@ class Author(models.Model):
     
     def __str__(self) -> str:
         return self.first_name
+    
+    def name(self):
+        return self.first_name
 
 class Book(models.Model):
     name = models.CharField(max_length=200)
@@ -20,6 +23,5 @@ class Book(models.Model):
 
     def __str__(self) -> str:
         return self.name
-
-
-# Create your models here.
+    class  Meta:
+        ordering = 'price'

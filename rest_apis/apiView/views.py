@@ -10,4 +10,4 @@ from rest_framework.decorators import api_view
 def get(request):
     book = Book.objects.all()
     serializer = Book_serializer(book,many=True)
-    return Response(serializer)
+    return Response(serializer.data)
