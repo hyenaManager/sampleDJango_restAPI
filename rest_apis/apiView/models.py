@@ -24,4 +24,4 @@ class Book(models.Model):
     def __str__(self) -> str:
         return self.name
     class  Meta:
-        ordering = 'price'
+        ordering = ['-price']
