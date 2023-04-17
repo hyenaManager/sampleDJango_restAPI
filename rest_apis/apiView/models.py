@@ -8,7 +8,10 @@ class Author(models.Model):
     address = models.CharField(max_length=200)
     gender = models.CharField(max_length=100,choices=genderC)
     
-    def __str__(self) -> str:
+    def name(self):
+        return self.first_name
+    
+    def __repr__(self) -> str:
         return self.first_name
 
 class Book(models.Model):
@@ -20,6 +23,5 @@ class Book(models.Model):
 
     def __str__(self) -> str:
         return self.name
-
-
-# Create your models here.
+    class  Meta:
+        ordering = ['-price']
